@@ -14,10 +14,10 @@ int find_Position(int a[], int left, int right, int key) {
 void binary_Insertion(int a[], int n) {
     for(int i=1; i < n; i++) {
         int key = a[i];
-        int position = find_Position(a,0,i-1,key);// day con hien tai
+        int position = find_Position(a,0,i-1,key);
         cout << position << " " << (i-1 >= position ? "True" : "False") << " ";
-        for(int j = i-1; j >= position; j--) { // xet day con [0,i]
-            a[j+1] = a[j]; // swap
+        for(int j = i-1; j >= position; j--) {
+            a[j+1] = a[j]; 
         }
         a[position] = key; // dao vi tri 
         for(int i=0; i < n; i++) cout << *(a+i) << " ";
