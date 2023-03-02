@@ -18,15 +18,14 @@ int modInverse(int a, int m) {
     int x, y;
     int gcd = extendedEuclid(a, m, x, y);
     if (gcd != 1) {
-        // a and m are not coprime, so inverse doesn't exist
         return -1;
     }
     else {
-        // x is the inverse of a modulo m
         return (x % m + m) % m;
     }
 }
 
 int main() {
-    
+    int a,m; cin >> a >> m;
+    cout << modInverse(a,m);
 }
