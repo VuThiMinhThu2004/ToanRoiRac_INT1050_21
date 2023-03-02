@@ -47,15 +47,6 @@ int countc() {
     return cnt;
 }
 
-int countd() {
-    int cnt = 0;
-    for(int i=2; i*i <= n; i++) {
-        cnt++;
-        while(n%i == 0) n/=i;
-    }
-    if(n!=1) cnt++;
-    return cnt;
-}
 int main() {
     cin >> n;
     fill_n( isPrime, 100000, true);
@@ -64,6 +55,5 @@ int main() {
     cout<<"1a: "<<counta()<<endl;
     cout<<"1b: "<<countb()<<endl;
     cout<<"1c: "<<countc()<<endl;
-    cout<<"1d: "<<countd()<<endl;
     return 0;
 }
