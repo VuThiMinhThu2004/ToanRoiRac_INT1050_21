@@ -11,6 +11,7 @@ int extendedEuclid(int a, int m, int& x, int& y) {
     int gcd = extendedEuclid(m, a % m, x1, y1);
     x = y1;
     y = x1 - y1 * (a / m);
+    cout << x << " " << y << " " << a << " " << m << " " << gcd <<endl;
     return gcd;
 }
 
