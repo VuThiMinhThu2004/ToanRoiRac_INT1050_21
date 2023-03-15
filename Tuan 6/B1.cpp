@@ -5,7 +5,7 @@ using namespace std;
 int n;
 int count(vector<char> s) {
     n--;
-    if (n == 1) {
+    if (n == 0) {
         if (s[0] == '1') return 1;
         else return 0;
     }
